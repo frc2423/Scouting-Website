@@ -10,15 +10,15 @@
                 return this.teamm.capabilities.includes(capability)
             }
         },
-        props: ['teamName', 'location', 'teamm', 'capabilities']
+        props: [ 'teamm']
     }
 </script>
 <template>
     <h2>{{ teamm.name }}</h2>
     <div>{{ teamm.location }}</div>
-    <div :class="{capable: isCapable(capability), incapable: !isCapable(capability)}" v-for="capability in allCapabilities">
-        {{ capability }}
-    </div>
+    <span :class="{capable: isCapable(capability), incapable: !isCapable(capability)}" v-for="capability in allCapabilities">
+        {{ capability }} | 
+    </span>
 
 </template>
 
