@@ -29,7 +29,7 @@ export default{
 <template>
     <div>
         <h1>Team List</h1>
-        <TeamRow v-for="team in teams" :teamm="team" :key="team.name" :teamName="team.name" :location="team.location" :capabilities="team.capabilities"/>
+        <TeamRow v-for="team in teams" :teamm="team" :key="team.name"  />
 
     </div>
 </template>
