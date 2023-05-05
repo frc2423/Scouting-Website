@@ -10,8 +10,9 @@ export default{
             teams:[
                 {
                     name: "The Kwarqs", 
-                    location: "Watertown, MA"},
+                    location: "Watertown, MA",
                     capabilities: ["score_high", "score_low", "cones", "cubes", "auto"]
+                },
                 {
                     name: "The Highlanders", 
                     location: "Somerville, MA",
