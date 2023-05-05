@@ -19,6 +19,7 @@ export default{
                     capabilities: ["score_high", "score_low"]
                 }
             ],
+            testProp: "asdf"
         }
     }
 }
@@ -28,7 +29,7 @@ export default{
 <template>
     <div>
         <h1>Team List</h1>
-        <TeamRow v-for="team in teams" :key="team.name" :teamName="team.name" :location="team.location" />
+        <TeamRow v-for="team in teams" :teamm="team" :key="team.name" :teamName="team.name" :location="team.location" :capabilities="team.capabilities"/>
 
     </div>
 </template>
