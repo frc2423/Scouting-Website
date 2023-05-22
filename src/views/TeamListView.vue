@@ -27,7 +27,16 @@ export default{
                     index: 3
                 }
             ],
-            testProp: "asdf"
+            teamFilter:""
+        }
+    },
+    computed: {
+        filteredTeams(){
+            if(this.teamFilter == ""){
+                return this.teams
+            } else{
+                return this.teams.map(team => team.name.toLowerCase()).filter(name => name.includes(this.teamFilter.toLowerCase()))
+            }
         }
     }
 }
@@ -37,7 +46,11 @@ export default{
 <template>
     <div>
         <h1>Team List</h1>
-        <TeamRow v-for="team in teams" :teamm="team" :key="team.index"  />
+        <div>
+            <input v-model="teamFilter" placeholder="Filter by team name...">
+        </div>
+        
+        <TeamRow v-for="team in filteredTeams" :teamm="team" :key="team.index"  />
     </div>
 
 
