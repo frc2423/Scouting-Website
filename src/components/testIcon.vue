@@ -1,17 +1,18 @@
+import vue from '@vitejs/plugin-vue'
 <script setup lang='ts'></script>
 
-<template>
-<body>
-<script lang="js">
+
+<script>
+export default {
 // create a new table element
 var table = document.createElement('table');
 
 // create three rows
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i &lt; 3; i++) {
   var row = document.createElement('tr');
 
   // create two cells for each row
-  for (var j = 0; j < 2; j++) {
+  for (var j = 0; j &lt; 2; j++) {
     var cell = document.createElement('td');
     cell.textContent = 'Row ' + i + ', Column ' + j;
     row.appendChild(cell);
@@ -23,7 +24,14 @@ for (var i = 0; i < 3; i++) {
 
 // add the table to the page
 document.body.appendChild(table);
+}
 </script>
-HIIIIII IT WORK
-</body>
-</template>
+
+<style>
+.my-component {
+    table {
+        color: white;
+    }
+}
+
+</style> 
